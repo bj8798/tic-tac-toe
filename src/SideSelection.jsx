@@ -1,7 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes, faCircle, faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
 
-const SideSelection = ({nextHandler}) => {
+const SideSelection = ({nextHandler, turnSetter}) => {
+
+  const handleSelection = (e) => {
+    turnSetter(e.target.value);
+  }
 
   return(
     <div>
@@ -23,10 +27,10 @@ const SideSelection = ({nextHandler}) => {
             </tr>
             <tr>
               <td>
-                <input type="radio" name="turn"/>
+                <input type="radio" name="turn" value="cross" checked onChange={handleSelection} />
               </td>
               <td>
-                <input type="radio" name="turn"/>
+                <input type="radio" name="turn" value="zero" onChange={handleSelection}/>
               </td>
             </tr>
           </tbody>

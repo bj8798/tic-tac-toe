@@ -15,7 +15,7 @@ const PlaySelection = ({nextHandler}) => {
           Choose your play mode
         </h3>
         <div>
-          <button className="basic-button">With AI</button>
+          <button className="basic-button blue-button">With AI</button>
         </div>
         <div>
           <button className="basic-button">With Friend</button>
