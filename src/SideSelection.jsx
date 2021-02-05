@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes, faCircle, faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes, faArrowCircleRight, faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 
 const SideSelection = ({nextHandler, turnSetter}) => {
 
@@ -22,7 +22,7 @@ const SideSelection = ({nextHandler, turnSetter}) => {
                 <FontAwesomeIcon icon={faTimes} className="home-icon" color="#F5A52D"/>
               </td>
               <td>
-                <FontAwesomeIcon icon={faCircle} className="home-icon" color="#05406d"/>
+                <FontAwesomeIcon icon={faCircleNotch} className="home-icon" color="#05406d"/>
               </td>
             </tr>
             <tr>

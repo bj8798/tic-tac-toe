@@ -1,24 +1,30 @@
+import {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes, faCircle, faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
+import { faTimes, faCircleNotch, faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
 
-const PlaySelection = ({nextHandler}) => {
+const PlaySelection = ({nextHandler, playModeSetter}) => {
 
+  const [mode, setMode] = useState("ai");
+  const handleSelection = (playMode) => {
+    setMode(playMode);
+    playModeSetter(playMode);
+  }
 
   return(
     <div>
       <div className="upper-div">
-        <FontAwesomeIcon icon={faTimes} className="home-icon" color="#F5A52D"/>
-        <FontAwesomeIcon icon={faCircle} className="home-icon" color="#05406d"/>
+        <FontAwesomeIcon icon={faTimes}  className="home-icon" color="#F5A52D"/>
+        <FontAwesomeIcon icon={faCircleNotch} className="far home-icon" color="#05406d"/>
       </div>
       <div className="lower-div">
         <h3>
           Choose your play mode
         </h3>
         <div>
-          <button className="basic-button blue-button">With AI</button>
+          <button className={`basic-button ${mode === "ai" ? "blue-button" :""}`} onClick={()=>handleSelection("ai")}>With AI</button>
         </div>
         <div>
-          <button className="basic-button">With Friend</button>
+          <button className={`basic-button ${mode === "friend" ? "blue-button" :""}`} onClick={()=>handleSelection("friend")}>With Friend</button>
         </div>
       </div>
       <div>
