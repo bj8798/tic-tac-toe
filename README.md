@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## This game is hosted at [heroku](https://enigmatic-ravine-08561.herokuapp.com/). Have a look! play some game!
+
 ## Available Scripts
 
 In the project directory, you can run:
